@@ -7,12 +7,31 @@ import { projects } from '../../data';
 
 function Model(props) {
     const { nodes, materials } = useGLTF('/models/scene.glb');
-
+    const { viewport } = useThree();
     const texture = useTexture(props.item?.img || '/images/black.jpg');
-
     const htmlRef = useRef();
     const groupRef = useRef();
     const [isVisible, setIsVisible] = useState(true);
+    const [htmlPosition, setHtmlPosition] = useState([0, 0, 0]);
+
+    useEffect(() => {
+        const updatePosition = () => {
+            const viewportHeight =
+                window.visualViewport?.height || window.innerHeight;
+            const offset = (window.innerHeight - viewportHeight) / 2;
+
+            setHtmlPosition([0, -offset * 0.001, 0]);
+        };
+
+        window.visualViewport?.addEventListener('resize', updatePosition);
+        updatePosition();
+
+        return () =>
+            window.visualViewport?.removeEventListener(
+                'resize',
+                updatePosition
+            );
+    }, []);
 
     useEffect(() => {
         if (groupRef.current) {
@@ -37,8 +56,6 @@ function Model(props) {
             setIsVisible(dot > 0.2);
         }
     });
-
-    const { viewport } = useThree();
 
     const scaleFactor = viewport.width < 2 ? 5 : 10;
 
@@ -167,33 +184,33 @@ function Model(props) {
             {isVisible && (
                 <Html
                     ref={htmlRef}
-                    position={[0, 0, 0]}
+                    position={htmlPosition}
                     transform
                     scale={0.025}
                     zIndexRange={[10, 20]}
                 >
-                    <div className="bg-black bg-opacity-25 w-[300px] h-[640px] p-6 rounded-[3rem] flex flex-col items-end justify-between">
-                        <div className="grid grid-cols-3 justify-items-center w-full mt-16 gap-y-8">
+                    <div
+                        style={{ transform: 'rotateY(180deg)' }}
+                        className="bg-black bg-opacity-25 w-[300px] h-[640px] p-6 rounded-[3rem] flex flex-col items-end justify-between"
+                    >
+                        <div className="grid grid-cols-3 justify-items-center w-full mt-16 gap-3">
                             {projects.map(proj => (
                                 <a
                                     key={proj.id}
                                     href={proj.href}
                                     target="_blank"
-                                    className="bg-gray-400 bg-opacity-50 flex flex-col justify-center items-center p-4 rounded-lg relative"
+                                    className="bg-gray-400 bg-opacity-50 flex flex-col justify-center items-center p-4 rounded-lg relative w-full h-full"
                                 >
                                     <img
                                         src={proj.img}
                                         alt="project"
-                                        height={40}
-                                        width={40}
                                         className={`${
-                                            proj.name === 'Apple' ? 'h-9' : ''
+                                            proj.name === 'Apple'
+                                                ? 'h-8 w-8'
+                                                : ''
                                         }`}
                                     />
-                                    <span
-                                        style={{ transform: 'rotateY(180deg)' }}
-                                        className="text-sm absolute bottom-0"
-                                    >
+                                    <span className="text-sm font-medium absolute bottom-0">
                                         {proj.name}
                                     </span>
                                 </a>
