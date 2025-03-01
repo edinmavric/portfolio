@@ -12,33 +12,33 @@ function Model(props) {
     const htmlRef = useRef();
     const groupRef = useRef();
     const [isVisible, setIsVisible] = useState(true);
-    const [htmlPosition, setHtmlPosition] = useState([0, 0, 0]);
+    // const [htmlPosition, setHtmlPosition] = useState([0, 0, 0]);
 
-    useEffect(() => {
-        const updatePosition = () => {
-            const fullHeight = window.innerHeight;
-            const visualHeight = window.visualViewport?.height || fullHeight;
-            const cssHeight = document.documentElement.clientHeight;
+    // useEffect(() => {
+    //     const updatePosition = () => {
+    //         const fullHeight = window.innerHeight;
+    //         const visualHeight = window.visualViewport?.height || fullHeight;
+    //         const cssHeight = document.documentElement.clientHeight;
 
-            const bottomBarOffset = fullHeight - visualHeight;
-            const safeAreaOffset = Math.max(
-                bottomBarOffset,
-                fullHeight - cssHeight
-            );
+    //         const bottomBarOffset = fullHeight - visualHeight;
+    //         const safeAreaOffset = Math.max(
+    //             bottomBarOffset,
+    //             fullHeight - cssHeight
+    //         );
 
-            setHtmlPosition([0, -safeAreaOffset * 0.0015, 0]);
-            console.log('Safe area offset:', safeAreaOffset);
-        };
+    //         setHtmlPosition([0, 0, 0]);
+    //         console.log('Safe area offset:', safeAreaOffset);
+    //     };
 
-        window.visualViewport?.addEventListener('resize', updatePosition);
-        updatePosition();
+    //     window.visualViewport?.addEventListener('resize', updatePosition);
+    //     updatePosition();
 
-        return () =>
-            window.visualViewport?.removeEventListener(
-                'resize',
-                updatePosition
-            );
-    }, []);
+    //     return () =>
+    //         window.visualViewport?.removeEventListener(
+    //             'resize',
+    //             updatePosition
+    //         );
+    // }, []);
 
     useEffect(() => {
         if (groupRef.current) {
@@ -191,7 +191,7 @@ function Model(props) {
             {isVisible && (
                 <Html
                     ref={htmlRef}
-                    position={htmlPosition}
+                    position={[0, 0, 0]}
                     transform
                     scale={0.025}
                     zIndexRange={[10, 20]}
