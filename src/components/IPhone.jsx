@@ -16,11 +16,18 @@ function Model(props) {
 
     useEffect(() => {
         const updatePosition = () => {
-            const viewportHeight =
-                window.visualViewport?.height || window.innerHeight;
-            const offset = (window.innerHeight - viewportHeight) / 2;
+            const fullHeight = window.innerHeight;
+            const visualHeight = window.visualViewport?.height || fullHeight;
+            const cssHeight = document.documentElement.clientHeight;
 
-            setHtmlPosition([0, -offset * 0.001, 0]);
+            const bottomBarOffset = fullHeight - visualHeight;
+            const safeAreaOffset = Math.max(
+                bottomBarOffset,
+                fullHeight - cssHeight
+            );
+
+            setHtmlPosition([0, -safeAreaOffset * 0.0015, 0]);
+            console.log('Safe area offset:', safeAreaOffset);
         };
 
         window.visualViewport?.addEventListener('resize', updatePosition);
@@ -199,7 +206,7 @@ function Model(props) {
                                     key={proj.id}
                                     href={proj.href}
                                     target="_blank"
-                                    className="bg-gray-400 bg-opacity-50 flex flex-col justify-center items-center p-4 rounded-lg relative w-full h-full"
+                                    className="bg-gray-400 bg-opacity-50 flex flex-col justify-center items-center p-4 rounded-lg relative w-[76px] h-[76px]"
                                 >
                                     <img
                                         src={proj.img}
