@@ -195,12 +195,13 @@ function Model(props) {
                     transform
                     scale={0.025}
                     zIndexRange={[10, 20]}
+                    className="select-none"
                 >
                     <div
                         style={{ transform: 'rotateY(180deg)' }}
-                        className="bg-black bg-opacity-25 w-[300px] h-[640px] p-6 rounded-[3rem] flex flex-col items-end justify-between"
+                        className="w-[300px] h-[550px] p-6 flex flex-col items-end justify-between"
                     >
-                        <div className="grid grid-cols-3 justify-items-center w-full mt-16 gap-3">
+                        <div className="grid grid-cols-3 justify-items-center w-full gap-3">
                             {projects.map(proj => (
                                 <a
                                     key={proj.id}
