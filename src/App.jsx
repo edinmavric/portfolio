@@ -19,6 +19,22 @@ export default function App() {
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
+    useEffect(() => {
+        const handleTouchMove = event => {
+            if (event.target.closest('canvas')) {
+                event.stopPropagation();
+            }
+        };
+
+        document.addEventListener('touchmove', handleTouchMove, {
+            passive: true,
+        });
+
+        return () => {
+            document.removeEventListener('touchmove', handleTouchMove);
+        };
+    }, []);
+
     return (
         <div className="flex flex-col bg-gray-900">
             <div className="flex items-center justify-center">
@@ -29,8 +45,8 @@ export default function App() {
                 </div>
             </div>
 
-            <div className="h-[100dvh]">
-                <Canvas className='pointer-events-none'>
+            <div className="h-[100dvh]" onTouchStart={e => e.stopPropagation()}>
+                <Canvas onPointerDown={e => e.stopPropagation()}>
                     <ambientLight intensity={0.3} />
                     <Lights />
                     <OrbitControls
