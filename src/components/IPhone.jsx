@@ -5,40 +5,13 @@ import { FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa';
 import * as THREE from 'three';
 import { projects } from '../../data';
 
-function Model(props) {
+function Model({ setDisableControls, ...props }) {
     const { nodes, materials } = useGLTF('/models/scene.glb');
     const { viewport } = useThree();
     const texture = useTexture(props.item?.img || '/images/black.jpg');
     const htmlRef = useRef();
     const groupRef = useRef();
     const [isVisible, setIsVisible] = useState(true);
-    // const [htmlPosition, setHtmlPosition] = useState([0, 0, 0]);
-
-    // useEffect(() => {
-    //     const updatePosition = () => {
-    //         const fullHeight = window.innerHeight;
-    //         const visualHeight = window.visualViewport?.height || fullHeight;
-    //         const cssHeight = document.documentElement.clientHeight;
-
-    //         const bottomBarOffset = fullHeight - visualHeight;
-    //         const safeAreaOffset = Math.max(
-    //             bottomBarOffset,
-    //             fullHeight - cssHeight
-    //         );
-
-    //         setHtmlPosition([0, 0, 0]);
-    //         console.log('Safe area offset:', safeAreaOffset);
-    //     };
-
-    //     window.visualViewport?.addEventListener('resize', updatePosition);
-    //     updatePosition();
-
-    //     return () =>
-    //         window.visualViewport?.removeEventListener(
-    //             'resize',
-    //             updatePosition
-    //         );
-    // }, []);
 
     useEffect(() => {
         if (groupRef.current) {
@@ -196,6 +169,8 @@ function Model(props) {
                     scale={0.025}
                     zIndexRange={[10, 20]}
                     className="select-none"
+                    onPointerDown={() => setDisableControls(true)}
+                    onPointerUp={() => setDisableControls(false)}
                 >
                     <div
                         style={{ transform: 'rotateY(180deg)' }}
@@ -208,6 +183,12 @@ function Model(props) {
                                     href={proj.href}
                                     target="_blank"
                                     className="bg-gray-400 bg-opacity-50 flex flex-col justify-center items-center p-4 rounded-lg relative w-[76px] h-[76px]"
+                                    onPointerDown={() =>
+                                        setDisableControls(true)
+                                    }
+                                    onPointerUp={() =>
+                                        setDisableControls(false)
+                                    }
                                 >
                                     <img
                                         src={proj.img}
