@@ -5,7 +5,7 @@ import { FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa';
 import * as THREE from 'three';
 import { projects } from '../../data';
 
-function Model({ setDisableControls, ...props }) {
+function Model(props) {
     const { nodes, materials } = useGLTF('/models/scene.glb');
     const { viewport } = useThree();
     const texture = useTexture(props.item?.img || '/images/black.jpg');
@@ -168,9 +168,7 @@ function Model({ setDisableControls, ...props }) {
                     transform
                     scale={0.025}
                     zIndexRange={[10, 20]}
-                    className="select-none"
-                    onPointerDown={() => setDisableControls(true)}
-                    onPointerUp={() => setDisableControls(false)}
+                    className="select-none pointer-events-auto"
                 >
                     <div
                         style={{ transform: 'rotateY(180deg)' }}
@@ -183,12 +181,6 @@ function Model({ setDisableControls, ...props }) {
                                     href={proj.href}
                                     target="_blank"
                                     className="bg-gray-400 bg-opacity-50 flex flex-col justify-center items-center p-4 rounded-lg relative w-[76px] h-[76px]"
-                                    onPointerDown={() =>
-                                        setDisableControls(true)
-                                    }
-                                    onPointerUp={() =>
-                                        setDisableControls(false)
-                                    }
                                 >
                                     <img
                                         src={proj.img}

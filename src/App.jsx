@@ -9,7 +9,6 @@ import { useEffect, useState } from 'react';
 
 export default function App() {
     const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
-    const [disableControls, setDisableControls] = useState(false);
 
     useEffect(() => {
         const handleResize = () => {
@@ -30,17 +29,17 @@ export default function App() {
                 </div>
             </div>
 
-            <div className="h-[100dvh] touch-none">
-                <Canvas>
+            <div className="h-[100dvh]">
+                <Canvas className='pointer-events-none'>
                     <ambientLight intensity={0.3} />
                     <Lights />
                     <OrbitControls
                         enablePan={false}
                         enableZoom={false}
-                        enableRotate={!isMobile || !disableControls}
+                        enableRotate={!isMobile}
                         rotateSpeed={0.4}
                     />
-                    <Model setDisableControls={setDisableControls} />
+                    <Model />
                 </Canvas>
             </div>
         </div>
