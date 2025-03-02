@@ -22,12 +22,12 @@ export default function App() {
     useEffect(() => {
         const handleTouchMove = event => {
             if (event.target.closest('canvas')) {
-                event.stopPropagation();
+                event.preventDefault();
             }
         };
 
         document.addEventListener('touchmove', handleTouchMove, {
-            passive: true,
+            passive: false,
         });
 
         return () => {
