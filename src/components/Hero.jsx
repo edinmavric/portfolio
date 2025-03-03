@@ -5,7 +5,7 @@ const Hero = () => {
     return (
         <section
             id="hero"
-            className="h-full mt-8 lg:mt-16 pb-16 pt-44 flex flex-col items-center justify-center"
+            className="h-[100dvh] flex flex-col items-center justify-center"
         >
             {/* <div className='absolute opacity-5'>
                 <svg

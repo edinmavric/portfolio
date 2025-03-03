@@ -1,10 +1,11 @@
-import { Canvas } from '@react-three/fiber';
-import { OrbitControls } from '@react-three/drei';
-import Model from './components/IPhone';
-import Lights from './components/Lights';
 import Hero from './components/Hero';
 import Navbar from './components/Navbar';
 import About from './components/About';
+import Approach from './components/Approach';
+import Experience from './components/Experience';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
+import IPhoneView from './components/IPhoneView';
 
 export default function App() {
     return (
@@ -14,20 +15,20 @@ export default function App() {
                     <Navbar />
                     <Hero />
                     <About />
+                    <Approach />
+                    <Experience />
                 </div>
             </div>
 
-            <div className="h-[100dvh] w-full">
-                <Canvas>
-                    <ambientLight intensity={0.3} />
-                    <Lights />
-                    <OrbitControls
-                        enablePan={false}
-                        enableZoom={false}
-                        rotateSpeed={0.4}
-                    />
-                    <Model />
-                </Canvas>
+            <div className="h-[90dvh] w-full">
+                <IPhoneView />
+            </div>
+
+            <div className="flex items-center justify-center">
+                <div className="flex flex-col items-center justify-center max-md:w-[90%]">
+                    <Contact />
+                    <Footer />
+                </div>
             </div>
         </div>
     );

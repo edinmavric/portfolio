@@ -8,9 +8,6 @@ import bg4 from '/images/bg4.jpg';
 import { FaCheck } from 'react-icons/fa';
 
 const About = () => {
-    const leftLists = ['ReactJS', 'Express', 'Typescript'];
-    const rightLists = ['VueJS', 'NuxtJS', 'GraphQL'];
-
     const [copied, setCopied] = useState(false);
 
     const handleCopy = () => {
@@ -22,7 +19,7 @@ const About = () => {
     return (
         <section
             id="about"
-            className="w-10/12 h-full pt-36 flex flex-col items-center justify-center text-white-100"
+            className="w-10/12 h-full flex flex-col items-center justify-center text-white-100"
         >
             <div className="grid grid-cols-4 grid-rows-5 gap-4 w-full max-sm:grid-cols-1 max-sm:grid-rows-6">
                 <div className="col-span-2 row-span-3 bg-black-100 p-8 rounded-lg border border-slate-700 flex items-end relative overflow-hidden">
@@ -61,7 +58,7 @@ const About = () => {
                                 (item, i) => (
                                     <div
                                         key={i}
-                                        className="bg-slate-800 rounded-md border border-slate-700 p-2 opacity-40"
+                                        className="bg-slate-800 rounded-md border border-slate-700 p-3"
                                     >
                                         {item}
                                     </div>
@@ -74,7 +71,7 @@ const About = () => {
                                 (item, i) => (
                                     <div
                                         key={i}
-                                        className="bg-slate-800 rounded-md border border-slate-700 p-2 opacity-40"
+                                        className="bg-slate-800 rounded-md border border-slate-700 p-3"
                                     >
                                         {item}
                                     </div>
