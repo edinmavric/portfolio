@@ -33,17 +33,17 @@ const About = () => {
                     <img
                         src={bg4}
                         alt="bg4"
-                        className="absolute top-0 bottom-0 right-0 left-0 opacity-15 w-full h-full"
+                        className="absolute top-0 bottom-0 right-0 left-0 opacity-15 w-full h-full object-cover"
                     />
                 </div>
                 <div className="col-span-2 row-span-1 bg-black-100 p-8 rounded-lg border border-slate-700 flex justify-center text-center relative overflow-hidden">
-                    <p className="lg:text-3xl text-xl font-semibold">
+                    <p className="lg:text-3xl text-xl font-semibold bg-gradient-to-l from-black-100 to-black-100">
                         I'm very flexible with time zone communications
                     </p>
                     <img
                         src={bg3}
                         alt="bg3"
-                        className="absolute w-1/2 opacity-60 object-cover"
+                        className="absolute max-sm:hidden w-1/2 opacity-60 object-cover"
                     />
                 </div>
                 <div className="col-span-2 row-span-1 bg-black-100 p-8 rounded-lg border border-slate-700 flex flex-col justify-center relative overflow-hidden">
