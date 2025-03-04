@@ -6,6 +6,7 @@ import bg2 from '/images/b2.svg';
 import bg3 from '/images/bg3.png';
 import bg4 from '/images/bg4.jpg';
 import { FaCheck } from 'react-icons/fa';
+import Card from './Card';
 
 const About = () => {
     const [copied, setCopied] = useState(false);
@@ -22,7 +23,10 @@ const About = () => {
             className="w-10/12 h-full flex flex-col items-center justify-center text-white-100"
         >
             <div className="grid grid-cols-4 grid-rows-5 gap-4 w-full max-sm:grid-cols-1 max-sm:grid-rows-6">
-                <div className="col-span-2 row-span-3 bg-black-100 p-8 rounded-lg border border-slate-700 flex items-end relative overflow-hidden">
+                <Card
+                    positionClasses="col-span-2 row-span-3 bg-black-100 relative overflow-hidden"
+                    otherClasses="flex items-end p-8"
+                >
                     <h3 className="lg:text-3xl text-xl font-semibold">
                         I prioritize client collaboration, fostering open
                         comunications
@@ -32,8 +36,11 @@ const About = () => {
                         alt="bg4"
                         className="absolute top-0 bottom-0 right-0 left-0 opacity-15 w-full h-full object-cover"
                     />
-                </div>
-                <div className="col-span-2 row-span-1 bg-black-100 p-8 rounded-lg border border-slate-700 flex justify-center text-center relative overflow-hidden">
+                </Card>
+                <Card
+                    positionClasses="col-span-2 row-span-1 bg-black-100 relative overflow-hidden"
+                    otherClasses="p-8 flex justify-center text-center"
+                >
                     <p className="lg:text-3xl text-xl font-semibold bg-gradient-to-l from-black-100 to-black-100">
                         I'm very flexible with time zone communications
                     </p>
@@ -42,8 +49,11 @@ const About = () => {
                         alt="bg3"
                         className="absolute max-sm:hidden w-1/2 opacity-60 object-cover"
                     />
-                </div>
-                <div className="col-span-2 row-span-1 bg-black-100 p-8 rounded-lg border border-slate-700 flex flex-col justify-center relative overflow-hidden">
+                </Card>
+                <Card
+                    positionClasses="col-span-2 row-span-1 bg-black-100 relative overflow-hidden"
+                    otherClasses="p-8 flex flex-col justify-center"
+                >
                     <div className="lg:w-5/12">
                         <p className="text-slate-500">
                             I constantly try to improve
@@ -58,7 +68,7 @@ const About = () => {
                                 (item, i) => (
                                     <div
                                         key={i}
-                                        className="bg-slate-800 rounded-md border border-slate-700 p-3"
+                                        className="bg-slate-800 rounded-md p-3"
                                     >
                                         {item}
                                     </div>
@@ -71,7 +81,7 @@ const About = () => {
                                 (item, i) => (
                                     <div
                                         key={i}
-                                        className="bg-slate-800 rounded-md border border-slate-700 p-3"
+                                        className="bg-slate-800 rounded-md p-3"
                                     >
                                         {item}
                                     </div>
@@ -79,8 +89,11 @@ const About = () => {
                             )}
                         </div>
                     </div>
-                </div>
-                <div className="col-span-2 row-span-3 bg-black-100 p-8 rounded-lg border border-slate-700 relative">
+                </Card>
+                <Card
+                    positionClasses="col-span-2 row-span-3 bg-black-100 relative"
+                    otherClasses="p-8"
+                >
                     <div>
                         <p className="text-slate-500">The Inside Scoop</p>
                         <p className="lg:text-3xl text-xl font-semibold">
@@ -92,8 +105,11 @@ const About = () => {
                         alt="bg2"
                         className="absolute bottom-0 right-0 opacity-90 max-sm:w-1/2"
                     />
-                </div>
-                <div className="col-span-2 row-span-1 bg-black-100 p-8 rounded-lg border border-slate-700 flex items-center relative">
+                </Card>
+                <Card
+                    positionClasses="col-span-2 row-span-1 bg-black-100 relative"
+                    otherClasses="p-8 flex items-center"
+                >
                     <p className="lg:text-3xl text-xl font-semibold">
                         Tech enthusiast with a passion for development.
                     </p>
@@ -102,8 +118,11 @@ const About = () => {
                         alt="bg1"
                         className="absolute bottom-0 right-0"
                     />
-                </div>
-                <div className="col-span-2 row-span-1 bg-gradient-to-r from-indigo-800 to-indigo-900 p-8 rounded-lg border border-slate-700 flex flex-col items-center justify-center">
+                </Card>
+                <Card
+                    positionClasses="col-span-2 row-span-1"
+                    otherClasses="p-8 flex flex-col items-center justify-center bg-gradient-to-r from-indigo-800 to-indigo-900"
+                >
                     <p className="lg:text-3xl text-xl font-semibold text-center pb-2">
                         Do you want to start a project together?
                     </p>
@@ -113,7 +132,7 @@ const About = () => {
                         position="left"
                         handleClick={handleCopy}
                     />
-                </div>
+                </Card>
             </div>
         </section>
     );

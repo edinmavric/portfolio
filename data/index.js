@@ -53,3 +53,14 @@ export const navLinks = [
     { id: 2, name: 'Projects', href: '#projects' },
     { id: 3, name: 'Contact', href: '#contact' },
 ];
+
+export const socialMedia = [
+    {
+        id: 1,
+        img: '/git.svg',
+    },
+    {
+        id: 2,
+        img: '/link.svg',
+    },
+];
