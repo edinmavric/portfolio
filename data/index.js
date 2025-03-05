@@ -58,9 +58,11 @@ export const socialMedia = [
     {
         id: 1,
         img: '/git.svg',
+        href: 'https://github.com/edinmavric',
     },
     {
         id: 2,
         img: '/link.svg',
+        href: 'https://www.linkedin.com/in/edinmavric',
     },
 ];

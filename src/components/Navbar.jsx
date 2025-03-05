@@ -18,7 +18,7 @@ const Navbar = () => {
 
     return (
         <header
-            className={`lg:w-full w-11/12 p-6 max-w-xl bg-slate-800 rounded-xl mt-8 lg:mt-16 fixed top-0 left-1/2 transform -translate-x-1/2 transition-transform duration-300 z-50 ${
+            className={`lg:w-full w-11/12 p-6 max-w-[30rem] bg-slate-800 rounded-xl mt-8 lg:mt-16 fixed top-0 left-1/2 transform -translate-x-1/2 transition-transform duration-300 z-50 ${
                 isVisible ? 'translate-y-0' : '-translate-y-[200%]'
             }`}
         >
