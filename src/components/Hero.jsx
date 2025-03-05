@@ -5,7 +5,7 @@ const Hero = () => {
     return (
         <section
             id="hero"
-            className="h-[100dvh] flex flex-col items-center justify-center"
+            className="py-60 pt-80 flex flex-col items-center justify-center"
         >
             {/* <div className='absolute opacity-5'>
                 <svg
@@ -29,7 +29,7 @@ const Hero = () => {
                 </svg>
             </div> */}
 
-            <p className="uppercase tracking-widest text-xs text-gray-300">
+            <p className="uppercase font-light tracking-widest text-sm text-gray-300">
                 making magic happen on web
             </p>
             <h1 className="text-white text-center mb-6 mt-3 font-bold text-[40px] md:text-5xl lg:text-6xl">

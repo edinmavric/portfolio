@@ -20,7 +20,7 @@ const About = () => {
     return (
         <section
             id="about"
-            className="w-10/12 h-full flex flex-col items-center justify-center text-white-100"
+            className="w-10/12 h-full flex flex-col items-center justify-center pt-12 text-white-100"
         >
             <div className="grid grid-cols-4 grid-rows-5 gap-4 w-full max-sm:grid-cols-1 max-sm:grid-rows-6">
                 <Card

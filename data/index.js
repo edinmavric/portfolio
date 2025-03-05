@@ -66,3 +66,31 @@ export const socialMedia = [
         href: 'https://www.linkedin.com/in/edinmavric',
     },
 ];
+
+export const experience = [
+    {
+        id: 1,
+        title: 'CEO & Founder',
+        description:
+            'Founded a software that gamifies learning for kids, focusing on math and problem-solving skills.',
+        image: '/images/exp1.svg',
+    },
+    {
+        id: 2,
+        title: 'Frontend Developer - CentarNIT',
+        description: 'Maintained and improved clients websites and apps.',
+        image: '/images/exp2.svg',
+    },
+    {
+        id: 3,
+        title: 'Web Dev Mentor - CentarNIT',
+        description: 'Taught kids and adults essential web development skills.',
+        image: '/images/exp3.svg',
+    },
+    {
+        id: 4,
+        title: 'Lead Frontend Developer',
+        description: 'Led a team to develop and maintain a client’s app.',
+        image: '/images/exp4.svg',
+    },
+];
