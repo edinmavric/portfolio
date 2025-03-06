@@ -33,7 +33,7 @@ function Model(props) {
 
             const dot = phoneForward.dot(toCamera);
 
-            setIsVisible(dot > 0.2);
+            setIsVisible(dot > 0.05);
         }
     });
 
@@ -162,69 +162,78 @@ function Model(props) {
             </mesh>
 
             {isVisible && (
-                <Html
-                    ref={htmlRef}
-                    position={[0, 0, 0]}
-                    transform
-                    scale={0.025}
-                    zIndexRange={[10, 100]}
-                    style={{ transform: 'rotateY(180deg)' }}
-                    className="w-[300px] h-[550px] p-6 flex flex-col items-end justify-between select-none"
-                >
-                    <div className="grid grid-cols-3 justify-items-center w-full gap-3">
-                        {projects.map(proj => (
-                            <a
-                                key={proj.id}
-                                href={proj.href}
-                                target="_blank"
-                                className="bg-gray-400 bg-opacity-50 flex flex-col justify-center items-center p-4 rounded-lg relative w-[76px] h-[76px]"
-                            >
-                                <img
-                                    src={proj.img}
-                                    alt="project"
-                                    className={`${
-                                        proj.name === 'Apple' ? 'h-8 w-8' : ''
-                                    }`}
-                                />
-                                <span className="text-sm font-medium absolute bottom-0">
-                                    {proj.name}
-                                </span>
-                            </a>
-                        ))}
-                    </div>
-                    <div className="flex w-full justify-around bg-white bg-opacity-20 p-4 rounded-3xl">
-                        <a href="https://github.com/edinmavric" target="_blank">
-                            <FaGithub
-                                style={{
-                                    width: '35px',
-                                    height: '35px',
-                                    color: 'white',
-                                }}
-                            />
-                        </a>
-                        <a
-                            href="https://linkedin.com/in/edinmavric"
-                            target="_blank"
-                        >
-                            <FaLinkedin
-                                style={{
-                                    width: '35px',
-                                    height: '35px',
-                                    color: 'white',
-                                }}
-                            />
-                        </a>
-                        <a href="mailto:edinmavric10@gmail.com">
-                            <FaEnvelope
-                                style={{
-                                    width: '35px',
-                                    height: '35px',
-                                    color: 'white',
-                                }}
-                            />
-                        </a>
-                    </div>
-                </Html>
+                <mesh ref={htmlRef} position={[0, 0, -0.0154]}>
+                    <Html
+                        transform
+                        distanceFactor={1}
+                        scale={0.25}
+                        zIndexRange={[10, 100]}
+                        anchorX="center"
+                        anchorY="middle"
+                        occlude
+                    >
+                        <div className="w-[300px] h-[550px] p-6 flex flex-col items-end justify-between select-none">
+                            <div className="grid grid-cols-3 justify-items-center w-full gap-3">
+                                {projects.map(proj => (
+                                    <a
+                                        key={proj.id}
+                                        href={proj.href}
+                                        target="_blank"
+                                        className="bg-gray-400 bg-opacity-50 flex flex-col justify-center items-center p-4 rounded-lg relative w-[76px] h-[76px]"
+                                    >
+                                        <img
+                                            src={proj.img}
+                                            alt="project"
+                                            className={`${
+                                                proj.name === 'Apple'
+                                                    ? 'h-8 w-8'
+                                                    : ''
+                                            }`}
+                                        />
+                                        <span className="text-sm font-medium absolute bottom-0">
+                                            {proj.name}
+                                        </span>
+                                    </a>
+                                ))}
+                            </div>
+                            <div className="flex w-full justify-around bg-white bg-opacity-20 p-4 rounded-3xl">
+                                <a
+                                    href="https://github.com/edinmavric"
+                                    target="_blank"
+                                >
+                                    <FaGithub
+                                        style={{
+                                            width: '35px',
+                                            height: '35px',
+                                            color: 'white',
+                                        }}
+                                    />
+                                </a>
+                                <a
+                                    href="https://linkedin.com/in/edinmavric"
+                                    target="_blank"
+                                >
+                                    <FaLinkedin
+                                        style={{
+                                            width: '35px',
+                                            height: '35px',
+                                            color: 'white',
+                                        }}
+                                    />
+                                </a>
+                                <a href="mailto:edinmavric10@gmail.com">
+                                    <FaEnvelope
+                                        style={{
+                                            width: '35px',
+                                            height: '35px',
+                                            color: 'white',
+                                        }}
+                                    />
+                                </a>
+                            </div>
+                        </div>
+                    </Html>
+                </mesh>
             )}
 
             <mesh

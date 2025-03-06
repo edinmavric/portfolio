@@ -4,15 +4,7 @@ import Button from './Button';
 
 const Footer = () => {
     return (
-        <footer className="w-full pt-20 pb-10" id="contact">
-            {/* <div className="w-full absolute left-0 -bottom-72 min-h-96">
-        <img
-          src="/footer-grid.svg"
-          alt="grid"
-          className="w-full h-full opacity-50 "
-        />
-      </div> */}
-
+        <footer className="w-full pt-40 pb-10" id="contact">
             <div className="flex flex-col items-center">
                 <h1 className="font-bold text-4xl md:text-5xl text-center lg:max-w-[45vw] text-white">
                     Ready to take <span className="text-purple">your</span>{' '}

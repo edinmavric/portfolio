@@ -20,6 +20,14 @@ export default function App() {
             </div>
 
             <div className="h-[90dvh] w-full">
+                <h1
+                    id="projects"
+                    className="font-bold text-4xl md:text-5xl text-center text-white pt-20"
+                >
+                    A small selection of{' '}
+                    <span className="text-purple">recent projects</span>
+                </h1>
+
                 <IPhoneView />
             </div>
 

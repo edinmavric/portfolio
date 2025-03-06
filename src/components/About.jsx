@@ -27,74 +27,56 @@ const About = () => {
                     positionClasses="col-span-2 row-span-3 bg-black-100 relative overflow-hidden"
                     otherClasses="flex items-end p-8"
                 >
-                    <h3 className="lg:text-3xl text-xl font-semibold">
-                        I prioritize client collaboration, fostering open
-                        comunications
-                    </h3>
+                    <div className="transition-transform duration-300 group-hover:translate-x-3">
+                        <h3 className="lg:text-3xl text-xl font-semibold">
+                            I prioritize client collaboration, fostering open
+                            communications
+                        </h3>
+                    </div>
                     <img
                         src={bg4}
                         alt="bg4"
                         className="absolute top-0 bottom-0 right-0 left-0 opacity-15 w-full h-full object-cover"
                     />
                 </Card>
+
                 <Card
                     positionClasses="col-span-2 row-span-1 bg-black-100 relative overflow-hidden"
                     otherClasses="p-8 flex justify-center text-center"
                 >
-                    <p className="lg:text-3xl text-xl font-semibold bg-gradient-to-l from-black-100 to-black-100">
-                        I'm very flexible with time zone communications
-                    </p>
+                    <div className="transition-transform duration-300 group-hover:translate-x-3">
+                        <p className="lg:text-3xl text-xl font-semibold">
+                            I'm very flexible with time zone communications
+                        </p>
+                    </div>
                     <img
                         src={bg3}
                         alt="bg3"
                         className="absolute max-sm:hidden w-1/2 opacity-60 object-cover"
                     />
                 </Card>
+
                 <Card
                     positionClasses="col-span-2 row-span-1 bg-black-100 relative overflow-hidden"
                     otherClasses="p-8 flex flex-col justify-center"
                 >
-                    <div className="lg:w-5/12">
-                        <p className="text-slate-500">
-                            I constantly try to improve
-                        </p>
-                        <p className="lg:text-3xl text-xl font-semibold">
-                            My Tech Stack
-                        </p>
-                    </div>
-                    <div className="flex justify-between max-sm:hidden">
-                        <div className="absolute bottom-0 right-4 flex flex-col gap-2">
-                            {['ThreeJS', 'Tailwind', 'SQL', ''].map(
-                                (item, i) => (
-                                    <div
-                                        key={i}
-                                        className="bg-slate-800 rounded-md p-3"
-                                    >
-                                        {item}
-                                    </div>
-                                )
-                            )}
-                        </div>
-
-                        <div className="absolute top-0 right-28 flex flex-col gap-2">
-                            {['', 'NextJS', 'ReactJS', 'Express'].map(
-                                (item, i) => (
-                                    <div
-                                        key={i}
-                                        className="bg-slate-800 rounded-md p-3"
-                                    >
-                                        {item}
-                                    </div>
-                                )
-                            )}
+                    <div className="transition-transform duration-300 group-hover:translate-x-3">
+                        <div className="lg:w-5/12">
+                            <p className="text-slate-500">
+                                I constantly try to improve
+                            </p>
+                            <p className="lg:text-3xl text-xl font-semibold">
+                                My Tech Stack
+                            </p>
                         </div>
                     </div>
                 </Card>
+
                 <Card
                     positionClasses="col-span-2 row-span-3 bg-black-100 relative"
                     otherClasses="p-8"
                 >
-                    <div>
+                    <div className="transition-transform duration-300 group-hover:translate-x-3">
                         <p className="text-slate-500">The Inside Scoop</p>
                         <p className="lg:text-3xl text-xl font-semibold">
                             Currently building Software for Learning
@@ -106,26 +88,32 @@ const About = () => {
                         className="absolute bottom-0 right-0 opacity-90 max-sm:w-1/2"
                     />
                 </Card>
+
                 <Card
                     positionClasses="col-span-2 row-span-1 bg-black-100 relative"
                     otherClasses="p-8 flex items-center"
                 >
-                    <p className="lg:text-3xl text-xl font-semibold">
-                        Tech enthusiast with a passion for development.
-                    </p>
+                    <div className="transition-transform duration-300 group-hover:translate-x-3">
+                        <p className="lg:text-3xl text-xl font-semibold">
+                            Tech enthusiast with a passion for development.
+                        </p>
+                    </div>
                     <img
                         src={bg1}
                         alt="bg1"
                         className="absolute bottom-0 right-0"
                     />
                 </Card>
+
                 <Card
                     positionClasses="col-span-2 row-span-1"
                     otherClasses="p-8 flex flex-col items-center justify-center bg-gradient-to-r from-indigo-800 to-indigo-900"
                 >
-                    <p className="lg:text-3xl text-xl font-semibold text-center pb-2">
-                        Do you want to start a project together?
-                    </p>
+                    <div className="transition-transform duration-300 group-hover:translate-x-3 text-center">
+                        <p className="lg:text-3xl text-xl font-semibold pb-2">
+                            Do you want to start a project together?
+                        </p>
+                    </div>
                     <Button
                         title={copied ? 'Email is Copied!' : 'Copy my Email'}
                         icon={copied ? <FaCheck /> : <IoCopyOutline />}

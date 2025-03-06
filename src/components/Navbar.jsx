@@ -4,17 +4,36 @@ import { navLinks } from '../../data';
 const Navbar = () => {
     const [isVisible, setIsVisible] = useState(true);
     const [lastScrollY, setLastScrollY] = useState(0);
+    const [navClicked, setNavClicked] = useState(false);
+    const [scrollTimeout, setScrollTimeout] = useState(null);
 
     useEffect(() => {
         const handleScroll = () => {
             const currentScrollY = window.scrollY;
+
             setIsVisible(currentScrollY < lastScrollY || currentScrollY < 50);
             setLastScrollY(currentScrollY);
+
+            if (navClicked) {
+                if (scrollTimeout) clearTimeout(scrollTimeout);
+                const newTimeout = setTimeout(() => {
+                    setIsVisible(false);
+                    setNavClicked(false);
+                }, 300);
+                setScrollTimeout(newTimeout);
+            }
         };
 
         window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, [lastScrollY]);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+            if (scrollTimeout) clearTimeout(scrollTimeout);
+        };
+    }, [lastScrollY, navClicked, scrollTimeout]);
+
+    const handleNavClick = () => {
+        setNavClicked(true);
+    };
 
     return (
         <header
@@ -24,7 +43,12 @@ const Navbar = () => {
         >
             <nav className="flex justify-around">
                 {navLinks.map(item => (
-                    <a key={item.id} href={item.href} className="text-white">
+                    <a
+                        key={item.id}
+                        href={item.href}
+                        className="text-white"
+                        onClick={handleNavClick}
+                    >
                         {item.name}
                     </a>
                 ))}

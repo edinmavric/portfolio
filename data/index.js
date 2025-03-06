@@ -90,7 +90,7 @@ export const experience = [
     {
         id: 4,
         title: 'Lead Frontend Developer',
-        description: 'Led a team to develop and maintain a client’s app.',
+        description: 'Led a team of developers to develop and maintain a client’s app.',
         image: '/images/exp4.svg',
     },
 ];
