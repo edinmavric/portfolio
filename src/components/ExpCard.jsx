@@ -1,6 +1,6 @@
 const ExpCard = ({ title, description, image }) => {
     return (
-        <div className="flex lg:items-center lg:justify-center flex-col lg:flex-row border border-gray-700 rounded-xl p-6 py-10 group">
+        <div className="flex lg:items-center lg:justify-center flex-col lg:flex-row border border-gray-700 rounded-xl p-6 py-10 group bg-slate-950">
             <img
                 src={image}
                 alt="experience"

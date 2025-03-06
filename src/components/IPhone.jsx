@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import { FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa';
 import * as THREE from 'three';
 import { projects } from '../../data';
+import { rotate } from 'three/tsl';
 
 function Model(props) {
     const { nodes, materials } = useGLTF('/models/scene.glb');
@@ -171,6 +172,7 @@ function Model(props) {
                         anchorX="center"
                         anchorY="middle"
                         occlude
+                        style={{ transform: 'rotateY(180deg)' }}
                     >
                         <div className="w-[300px] h-[550px] p-6 flex flex-col items-end justify-between select-none">
                             <div className="grid grid-cols-3 justify-items-center w-full gap-3">
