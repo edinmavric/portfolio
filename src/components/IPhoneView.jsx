@@ -3,7 +3,7 @@ import { OrbitControls } from '@react-three/drei';
 import Model from './IPhone';
 import Lights from './Lights';
 
-const IPhoneView = () => {
+const IPhoneView = ({ triggerRef }) => {
     return (
         <Canvas>
             <ambientLight intensity={0.3} />
@@ -13,7 +13,7 @@ const IPhoneView = () => {
                 enableZoom={false}
                 rotateSpeed={0.4}
             />
-            <Model />
+            <Model triggerRef={triggerRef} />
         </Canvas>
     );
 };

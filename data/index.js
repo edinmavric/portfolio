@@ -48,7 +48,6 @@ export const projects = [
 ];
 
 export const navLinks = [
-    // { id: 1, name: 'Home', href: '#home' },
     { id: 1, name: 'About', href: '#about' },
     { id: 2, name: 'Projects', href: '#projects' },
     { id: 3, name: 'Contact', href: '#contact' },
@@ -90,7 +89,26 @@ export const experience = [
     {
         id: 4,
         title: 'Lead Frontend Developer',
-        description: 'Led a team of developers to develop and maintain a client’s app.',
+        description:
+            'Led a team of developers to develop and maintain a client’s app.',
         image: '/images/exp4.svg',
+    },
+];
+
+export const approach = [
+    {
+        id: 1,
+        heading: 'Planning & Strategy',
+        text: "We'll collaborate to map out your website's goals, target audience, and key functionalities. We'll discuss things like site structure, navigation, and content requirements.",
+    },
+    {
+        id: 2,
+        heading: 'Development & Progress Update',
+        text: 'Once we agree on the plan, I cue my lofi playlist and dive into coding. From initial sketches to polished code, I keep you updated every step of the way.',
+    },
+    {
+        id: 3,
+        heading: 'Development & Launch',
+        text: "This is where the magic happens! Based on the approved design, I'll translate everything into functional code, building your website from the ground up.",
     },
 ];

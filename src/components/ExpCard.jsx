@@ -1,6 +1,6 @@
-const ExpCard = ({ title, description, image }) => {
+const ExpCard = ({ title, description, image, otherClasses }) => {
     return (
-        <div className="flex lg:items-center lg:justify-center flex-col lg:flex-row border border-gray-700 rounded-xl p-6 py-10 group bg-slate-950">
+        <div className={`flex lg:items-center lg:justify-center flex-col lg:flex-row border border-gray-700 rounded-xl p-6 py-10 group bg-slate-950 ${otherClasses}`}>
             <img
                 src={image}
                 alt="experience"

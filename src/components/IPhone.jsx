@@ -3,10 +3,14 @@ import { useFrame, useThree } from '@react-three/fiber';
 import { useEffect, useRef, useState } from 'react';
 import { FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa';
 import * as THREE from 'three';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useGSAP } from '@gsap/react';
 import { projects } from '../../data';
-import { rotate } from 'three/tsl';
 
-function Model(props) {
+gsap.registerPlugin(ScrollTrigger);
+
+function Model({ triggerRef, ...props }) {
     const { nodes, materials } = useGLTF('/models/scene.glb');
     const { viewport } = useThree();
     const texture = useTexture(props.item?.img || '/images/black.jpg');
@@ -18,6 +22,43 @@ function Model(props) {
         if (groupRef.current) {
             groupRef.current.rotation.set(0, Math.PI, 0);
         }
+    }, []);
+
+    useGSAP(() => {
+        if (!groupRef.current || !triggerRef?.current) return;
+
+        gsap.fromTo(
+            groupRef.current.position,
+            { x: -viewport.width * 1.5, y: 0 }, // Start far left only
+            {
+                x: 0,
+                y: 0,
+                duration: 2.5,
+                ease: 'power3.out',
+                scrollTrigger: {
+                    trigger: triggerRef.current,
+                    start: 'top center',
+                    toggleActions: 'play none none none',
+                    once: true,
+                },
+            }
+        );
+
+        gsap.fromTo(
+            groupRef.current.rotation,
+            { y: Math.PI },
+            {
+                y: Math.PI * 3,
+                duration: 2.5,
+                ease: 'power3.out',
+                scrollTrigger: {
+                    trigger: triggerRef.current,
+                    start: 'top center',
+                    toggleActions: 'play none none none',
+                    once: true,
+                },
+            }
+        );
     }, []);
 
     useFrame(({ camera }) => {
