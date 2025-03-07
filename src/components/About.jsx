@@ -70,6 +70,34 @@ const About = () => {
                             </p>
                         </div>
                     </div>
+
+                    <div className="flex justify-between max-sm:hidden opacity-75">
+                        <div className="absolute bottom-0 right-4 flex flex-col gap-2">
+                            {['ThreeJS', 'Tailwind', 'SQL', ''].map(
+                                (item, i) => (
+                                    <div
+                                        key={i}
+                                        className="bg-slate-800 rounded-md p-3"
+                                    >
+                                        {item}
+                                    </div>
+                                )
+                            )}
+                        </div>
+
+                        <div className="absolute top-0 right-28 flex flex-col gap-2">
+                            {['', 'NextJS', 'ReactJS', 'Express'].map(
+                                (item, i) => (
+                                    <div
+                                        key={i}
+                                        className="bg-slate-800 rounded-md p-3"
+                                    >
+                                        {item}
+                                    </div>
+                                )
+                            )}
+                        </div>
+                    </div>
                 </Card>
 
                 <Card

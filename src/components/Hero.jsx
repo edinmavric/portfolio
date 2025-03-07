@@ -36,7 +36,7 @@ const Hero = () => {
             id="hero"
             className="py-60 pt-80 flex flex-col items-center justify-center"
         >
-            <div className="w-full absolute left-0 right-0 top-0 min-h-96">
+            <div className="w-full absolute max-md:bottom-0 left-0 right-0 top-0 min-h-96">
                 <img src="/grid.svg" alt="grid" className="w-full h-full" />
             </div>
 
