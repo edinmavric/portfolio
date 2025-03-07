@@ -1,7 +1,7 @@
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { useRef } from 'react';
-import { FaLocationArrow } from 'react-icons/fa';
+import { FaFile } from 'react-icons/fa';
 import Button from './Button';
 
 const Hero = () => {
@@ -15,14 +15,14 @@ const Hero = () => {
                 opacity: 0,
                 y: 30,
                 stagger: 0.2,
-                duration: 1.2,
+                duration: 1,
                 ease: 'power3.out',
             });
 
             tl.from('.hero-title span', {
                 opacity: 0,
                 y: 20,
-                stagger: 0.3,
+                stagger: 0.2,
                 duration: 0.8,
                 ease: 'power3.out',
             });
@@ -53,10 +53,10 @@ const Hero = () => {
                 Hi! I'm Edin, a Web Developer based in Serbia.
             </p>
 
-            <a href="#about">
+            <a href="/EdinMavricCV.pdf" download>
                 <Button
-                    title="See my work"
-                    icon={<FaLocationArrow />}
+                    title="Download my Resumè"
+                    icon={<FaFile />}
                     position="right"
                 />
             </a>

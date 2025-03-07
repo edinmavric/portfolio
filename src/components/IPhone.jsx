@@ -215,23 +215,20 @@ function Model({ triggerRef, ...props }) {
                         occlude
                         style={{ transform: 'rotateY(180deg)' }}
                     >
-                        <div className="w-[300px] h-[550px] p-6 flex flex-col items-end justify-between select-none">
+                        <div className="w-[300px] h-[620px] p-6 py-12 bg-black-100 bg-opacity-50  flex flex-col items-end justify-between select-none">
                             <div className="grid grid-cols-3 justify-items-center w-full gap-3">
                                 {projects.map(proj => (
                                     <a
                                         key={proj.id}
                                         href={proj.href}
                                         target="_blank"
-                                        className="bg-gray-400 bg-opacity-50 flex flex-col justify-center items-center p-4 rounded-lg relative w-[76px] h-[76px]"
+                                        className="bg-gray-400 backdrop-blur-lg bg-opacity-50 flex flex-col justify-center items-center p-4 rounded-lg relative w-[76px] h-[76px]"
                                     >
                                         <img
                                             src={proj.img}
                                             alt="project"
-                                            className={`${
-                                                proj.name === 'Apple'
-                                                    ? 'h-8 w-8'
-                                                    : ''
-                                            }`}
+                                            className={`h-10 w-10
+                                            `}
                                         />
                                         <span className="text-sm font-medium absolute bottom-0">
                                             {proj.name}
@@ -239,7 +236,7 @@ function Model({ triggerRef, ...props }) {
                                     </a>
                                 ))}
                             </div>
-                            <div className="flex w-full justify-around bg-white bg-opacity-20 p-4 rounded-3xl">
+                            <div className="flex w-full justify-around bg-white bg-opacity-20 backdrop-blur-lg p-4 rounded-3xl">
                                 <a
                                     href="https://github.com/edinmavric"
                                     target="_blank"

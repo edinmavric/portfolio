@@ -22,13 +22,13 @@ const About = () => {
             id="about"
             className="w-10/12 h-full flex flex-col items-center justify-center pt-12 text-white-100"
         >
-            <div className="grid grid-cols-4 grid-rows-5 gap-4 w-full max-sm:grid-cols-1 max-sm:grid-rows-6">
+            <div className="grid grid-cols-4 auto-rows-fr gap-4 w-full max-sm:grid-cols-1 max-sm:auto-rows-fr">
                 <Card
-                    positionClasses="col-span-2 row-span-3 bg-black-100 relative overflow-hidden"
-                    otherClasses="flex items-end p-8"
+                    positionClasses="col-span-2 row-span-2 bg-black-100 relative overflow-hidden min-h-[180px]"
+                    otherClasses="flex items-end p-4"
                 >
                     <div className="transition-transform duration-300 group-hover:translate-x-3">
-                        <h3 className="lg:text-3xl text-xl font-semibold">
+                        <h3 className="lg:text-2xl text-lg font-semibold">
                             I prioritize client collaboration, fostering open
                             communications
                         </h3>
@@ -41,11 +41,11 @@ const About = () => {
                 </Card>
 
                 <Card
-                    positionClasses="col-span-2 row-span-1 bg-black-100 relative overflow-hidden"
-                    otherClasses="p-8 flex justify-center text-center"
+                    positionClasses="col-span-2 row-span-1 bg-black-100 relative overflow-hidden min-h-[180px]"
+                    otherClasses="p-4 flex justify-center text-center"
                 >
                     <div className="transition-transform duration-300 group-hover:translate-x-3">
-                        <p className="lg:text-3xl text-xl font-semibold">
+                        <p className="lg:text-2xl text-lg font-semibold">
                             I'm very flexible with time zone communications
                         </p>
                     </div>
@@ -57,15 +57,15 @@ const About = () => {
                 </Card>
 
                 <Card
-                    positionClasses="col-span-2 row-span-1 bg-black-100 relative overflow-hidden"
-                    otherClasses="p-8 flex flex-col justify-center"
+                    positionClasses="col-span-2 row-span-1 bg-black-100 relative overflow-hidden min-h-[180px]"
+                    otherClasses="p-4 flex flex-col justify-center"
                 >
                     <div className="transition-transform duration-300 group-hover:translate-x-3">
                         <div className="lg:w-5/12">
-                            <p className="text-slate-500">
+                            <p className="text-slate-500 text-sm">
                                 I constantly try to improve
                             </p>
-                            <p className="lg:text-3xl text-xl font-semibold">
+                            <p className="lg:text-2xl text-lg font-semibold">
                                 My Tech Stack
                             </p>
                         </div>
@@ -77,7 +77,7 @@ const About = () => {
                                 (item, i) => (
                                     <div
                                         key={i}
-                                        className="bg-slate-800 rounded-md p-3"
+                                        className="bg-slate-800 rounded-md p-2 text-sm"
                                     >
                                         {item}
                                     </div>
@@ -90,7 +90,7 @@ const About = () => {
                                 (item, i) => (
                                     <div
                                         key={i}
-                                        className="bg-slate-800 rounded-md p-3"
+                                        className="bg-slate-800 rounded-md p-2 text-sm"
                                     >
                                         {item}
                                     </div>
@@ -101,28 +101,11 @@ const About = () => {
                 </Card>
 
                 <Card
-                    positionClasses="col-span-2 row-span-3 bg-black-100 relative"
-                    otherClasses="p-8"
+                    positionClasses="col-span-2 row-span-1 bg-black-100 relative min-h-[180px]"
+                    otherClasses="p-4 flex items-center"
                 >
                     <div className="transition-transform duration-300 group-hover:translate-x-3">
-                        <p className="text-slate-500">The Inside Scoop</p>
-                        <p className="lg:text-3xl text-xl font-semibold">
-                            Currently building Software for Learning
-                        </p>
-                    </div>
-                    <img
-                        src={bg2}
-                        alt="bg2"
-                        className="absolute bottom-0 right-0 opacity-90 max-sm:w-1/2"
-                    />
-                </Card>
-
-                <Card
-                    positionClasses="col-span-2 row-span-1 bg-black-100 relative"
-                    otherClasses="p-8 flex items-center"
-                >
-                    <div className="transition-transform duration-300 group-hover:translate-x-3">
-                        <p className="lg:text-3xl text-xl font-semibold">
+                        <p className="lg:text-2xl text-lg font-semibold">
                             Tech enthusiast with a passion for development.
                         </p>
                     </div>
@@ -134,11 +117,30 @@ const About = () => {
                 </Card>
 
                 <Card
-                    positionClasses="col-span-2 row-span-1"
-                    otherClasses="p-8 flex flex-col items-center justify-center bg-gradient-to-r from-indigo-800 to-indigo-900"
+                    positionClasses="col-span-2 row-span-2 bg-black-100 relative min-h-[180px]"
+                    otherClasses="p-4"
+                >
+                    <div className="transition-transform duration-300 group-hover:translate-x-3">
+                        <p className="text-slate-500 text-sm">
+                            The Inside Scoop
+                        </p>
+                        <p className="lg:text-2xl text-lg font-semibold">
+                            Currently building Software for Learning
+                        </p>
+                    </div>
+                    <img
+                        src={bg2}
+                        alt="bg2"
+                        className="absolute bottom-0 right-0 opacity-90 max-sm:w-1/2"
+                    />
+                </Card>
+
+                <Card
+                    positionClasses="col-span-2 row-span-1 min-h-[180px]"
+                    otherClasses="p-4 flex flex-col items-center justify-center bg-gradient-to-r from-indigo-800 to-indigo-900"
                 >
                     <div className="transition-transform duration-300 group-hover:translate-x-3 text-center">
-                        <p className="lg:text-3xl text-xl font-semibold pb-2">
+                        <p className="lg:text-2xl text-lg font-semibold pb-2">
                             Do you want to start a project together?
                         </p>
                     </div>
