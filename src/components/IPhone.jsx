@@ -215,7 +215,7 @@ function Model({ triggerRef, ...props }) {
                         occlude
                         style={{ transform: 'rotateY(180deg)' }}
                     >
-                        <div className="w-[300px] h-[620px] p-6 py-12 bg-black-100 bg-opacity-50  flex flex-col items-end justify-between select-none">
+                        <div className="w-[300px] h-[620px] p-6 py-12 bg-black-100 bg-opacity-50 rounded-[3.25rem] flex flex-col items-end justify-between select-none">
                             <div className="grid grid-cols-3 justify-items-center w-full gap-3">
                                 {projects.map(proj => (
                                     <a
