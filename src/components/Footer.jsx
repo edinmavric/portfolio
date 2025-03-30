@@ -5,7 +5,7 @@ import Button from './Button';
 const Footer = () => {
     return (
         <footer className="w-full pt-40 pb-10 relative" id="contact">
-            <div className="w-full absolute left-0 right-0 bottom-0 min-h-96">
+            <div className="w-full absolute left-0 right-0 bottom-0 min-h-96 max-lg:h-96">
                 <img
                     src="/footer-grid.svg"
                     alt="grid"
