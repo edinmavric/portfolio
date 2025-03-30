@@ -1,3 +1,4 @@
+import js from '@eslint/js';
 import {
     aoraLogo,
     aorass,
@@ -11,6 +12,20 @@ import {
     mojnpss,
     vercelLogo,
     sociallyss,
+    reactLogo,
+    typescriptLogo,
+    htmlLogo,
+    cssLogo,
+    threeLogo,
+    gsapLogo,
+    tailwindLogo,
+    jsLogo,
+    reactnativeLogo,
+    expoLogo,
+    nextjsLogo,
+    clerkLogo,
+    appwriteLogo,
+    prismaLogo,
 } from '../constants';
 
 export const projects = [
@@ -127,11 +142,10 @@ export const projectsSm = [
             "A tourist platform designed to help visitors explore the city's hidden gems and navigate easily.",
         link: 'https://www.mojnovipazar.info/',
         technologies: [
-            { id: 0, img: mojnpLogo },
-            { id: 1, img: mojnpLogo },
-            { id: 2, img: mojnpLogo },
-            { id: 3, img: mojnpLogo },
-            { id: 4, img: mojnpLogo },
+            { id: 0, img: reactLogo },
+            { id: 1, img: typescriptLogo },
+            { id: 2, img: htmlLogo },
+            { id: 3, img: cssLogo },
         ],
     },
     {
@@ -141,11 +155,11 @@ export const projectsSm = [
             "A replica of Apple's iPhone 15 Pro product page, showcasing sleek design and animations.",
         link: 'https://edins-apple.pages.dev/',
         technologies: [
-            { img: mojnpLogo },
-            { img: mojnpLogo },
-            { img: mojnpLogo },
-            { img: mojnpLogo },
-            { img: mojnpLogo },
+            { img: reactLogo },
+            { img: threeLogo },
+            { img: gsapLogo },
+            { img: jsLogo },
+            { img: tailwindLogo },
         ],
     },
     {
@@ -155,11 +169,11 @@ export const projectsSm = [
             'A copy of BrainwaveCurve, an AI-powered chat app that enhances productivity with smart AI interactions.',
         link: 'https://edins-brainwave.pages.dev/',
         technologies: [
-            { img: mojnpLogo },
-            { img: mojnpLogo },
-            { img: mojnpLogo },
-            { img: mojnpLogo },
-            { img: mojnpLogo },
+            { img: reactLogo },
+            { img: jsLogo },
+            { img: htmlLogo },
+            { img: cssLogo },
+            { img: tailwindLogo },
         ],
     },
     {
@@ -169,11 +183,11 @@ export const projectsSm = [
             'A mobile social app for sharing AI-generated videos with a creative community.',
         link: 'https://github.com/edinmavric/Aora',
         technologies: [
-            { img: mojnpLogo },
-            { img: mojnpLogo },
-            { img: mojnpLogo },
-            { img: mojnpLogo },
-            { img: mojnpLogo },
+            { img: reactnativeLogo },
+            { img: expoLogo },
+            { img: appwriteLogo },
+            { img: jsLogo },
+            { img: tailwindLogo },
         ],
     },
     {
@@ -183,11 +197,11 @@ export const projectsSm = [
             'A social media platform inspired by Instagram, allowing users to connect and share content.',
         link: 'https://socially-weld.vercel.app/',
         technologies: [
-            { img: mojnpLogo },
-            { img: mojnpLogo },
-            { img: mojnpLogo },
-            { img: mojnpLogo },
-            { img: mojnpLogo },
+            { img: nextjsLogo },
+            { img: prismaLogo },
+            { img: tailwindLogo },
+            { img: typescriptLogo },
+            { img: clerkLogo },
         ],
     },
     {
@@ -196,12 +210,6 @@ export const projectsSm = [
         description:
             'A university project for managing hair salon appointments and scheduling.',
         link: 'https://edinmavric.github.io/edo-frizer/Pages/home/home.html',
-        technologies: [
-            { img: mojnpLogo },
-            { img: mojnpLogo },
-            { img: mojnpLogo },
-            { img: mojnpLogo },
-            { img: mojnpLogo },
-        ],
+        technologies: [{ img: jsLogo }, { img: htmlLogo }, { img: cssLogo }],
     },
 ];
