@@ -27,7 +27,7 @@ const About = () => {
                     positionClasses="col-span-2 row-span-2 bg-black-100 relative overflow-hidden min-h-[180px]"
                     otherClasses="flex items-end p-4"
                 >
-                    <div className="transition-transform duration-300 group-hover:translate-x-3">
+                    <div className="transition-transform duration-300 group-hover:translate-x-2">
                         <h3 className="lg:text-2xl text-lg font-semibold lg:w-8/12">
                             I prioritize client collaboration, fostering open
                             communications
@@ -42,9 +42,9 @@ const About = () => {
 
                 <Card
                     positionClasses="col-span-2 row-span-1 bg-black-100 relative overflow-hidden min-h-[180px]"
-                    otherClasses="p-4 flex justify-center text-center"
+                    otherClasses="p-4 flex justify-center text-center duration-300 hover:bg-gray-900"
                 >
-                    <div className="transition-transform duration-300 group-hover:translate-x-3 md:flex md:items-center md:justify-center lg:items-start lg:justify-start">
+                    <div className="transition-transform duration-300 group-hover:translate-x-2 flex items-center justify-center lg:items-start lg:justify-start">
                         <p className="lg:text-2xl text-lg font-semibold">
                             I'm very flexible with time zone communications
                         </p>
@@ -58,9 +58,9 @@ const About = () => {
 
                 <Card
                     positionClasses="col-span-2 row-span-1 bg-black-100 relative overflow-hidden min-h-[180px]"
-                    otherClasses="p-4 flex flex-col justify-center"
+                    otherClasses="p-4 flex flex-col justify-center duration-300 hover:bg-gray-900"
                 >
-                    <div className="transition-transform duration-300 group-hover:translate-x-3">
+                    <div className="transition-transform duration-300 group-hover:translate-x-2">
                         <div className="lg:w-5/12">
                             <p className="text-slate-500 text-sm">
                                 I constantly try to improve
@@ -109,9 +109,9 @@ const About = () => {
 
                 <Card
                     positionClasses="col-span-2 row-span-1 bg-black-100 relative min-h-[180px]"
-                    otherClasses="p-4 flex items-center"
+                    otherClasses="p-4 flex items-center duration-300 hover:bg-gray-900"
                 >
-                    <div className="transition-transform duration-300 group-hover:translate-x-3">
+                    <div className="transition-transform duration-300 group-hover:translate-x-2">
                         <p className="lg:text-2xl text-lg font-semibold">
                             Tech enthusiast with a passion for development.
                         </p>
@@ -125,9 +125,9 @@ const About = () => {
 
                 <Card
                     positionClasses="col-span-2 row-span-2 bg-black-100 relative min-h-[180px]"
-                    otherClasses="p-4"
+                    otherClasses="p-4 duration-300 hover:bg-gray-900"
                 >
-                    <div className="transition-transform duration-300 group-hover:translate-x-3">
+                    <div className="transition-transform duration-300 group-hover:translate-x-2">
                         <p className="text-slate-500 text-sm">
                             The Inside Scoop
                         </p>
@@ -146,7 +146,7 @@ const About = () => {
                     positionClasses="col-span-2 row-span-1 min-h-[180px]"
                     otherClasses="p-4 flex flex-col items-center justify-center bg-gradient-to-r to-indigo-900 from-slate-950"
                 >
-                    <div className="transition-transform duration-300 group-hover:translate-x-3 text-center">
+                    <div className="transition-transform duration-300 group-hover:translate-x-2 text-center">
                         <p className="lg:text-2xl text-lg font-semibold pb-2">
                             Do you want to start a project together?
                         </p>

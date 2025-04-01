@@ -47,7 +47,7 @@ const Experience = () => {
                 <span className="text-purple">work experience</span>
             </h1>
 
-            <div className="lg:grid grid-cols-2 flex flex-col items-center justify-center gap-6 py-16 lg:items-start">
+            <div className="lg:grid grid-cols-2 flex flex-col lg:items-stretch justify-center gap-6 py-16 items-center lg:h-full">
                 {experience.map((item, index) => (
                     <ExpCard
                         key={item.id}

@@ -14,7 +14,7 @@ const Projects = () => {
         () => {
             const cards = gsap.utils.toArray('.project-card');
 
-            cards.forEach((card, index) => {
+            cards.forEach(card => {
                 const initialY = 100;
 
                 gsap.set(card, { opacity: 0, y: initialY });
@@ -37,14 +37,12 @@ const Projects = () => {
     );
 
     return (
-        <section
-            ref={sectionRef}
-            className="flex flex-col items-center"
-        >
+        <section ref={sectionRef} className="flex flex-col items-center">
             {projectsSm.map((item, key) => (
                 <ProjectCard
                     key={key}
                     otherClasses="project-card"
+                    type={item.type}
                     image={item.image}
                     title={item.title}
                     description={item.description}

@@ -136,6 +136,7 @@ export const approach = [
 
 export const projectsSm = [
     {
+        type: 'web',
         image: mojnpss,
         title: 'Moj Novi Pazar',
         description:
@@ -149,6 +150,7 @@ export const projectsSm = [
         ],
     },
     {
+        type: 'web',
         image: appless,
         title: "Apple's iPhone 15 Pro Website",
         description:
@@ -163,6 +165,7 @@ export const projectsSm = [
         ],
     },
     {
+        type: 'web',
         image: brainwavess,
         title: 'Brainwave',
         description:
@@ -177,6 +180,7 @@ export const projectsSm = [
         ],
     },
     {
+        type: 'mobile',
         image: aorass,
         title: 'Aora',
         description:
@@ -191,6 +195,7 @@ export const projectsSm = [
         ],
     },
     {
+        type: 'web',
         image: sociallyss,
         title: 'Socially',
         description:
@@ -205,6 +210,7 @@ export const projectsSm = [
         ],
     },
     {
+        type: 'web',
         image: edofrizerss,
         title: 'Edo Frizer',
         description:
